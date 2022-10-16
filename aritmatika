@@ -1,36 +1,34 @@
 #include <stdio.h>
 #include <math.h>
 
-int main();
+//perhitungan
 
-
-
-float barisAritmatika(float a, float b, float c){
+float hitungBrsAritmatika(float a, float b, float c){
     return (a + (b-1) * c);
-    
 }
 
 float jumlahBrsAritmatika(float a, float b, float c){
     return ((b * 0.5) * (2 * a + (b-1) * c));
-           }
+}
 
-
+//menu
 
 void aritmatika1(){
     float bil1, bil2, b;
-    int n;
-    printf("||===============================|| \n");
-    printf("||        BARIS ARITMATIKA       || \n");
-    printf("||===============================|| \n");
-    printf("|| BIlangan Pertama : \n");
+    int x;
+    printf("||===============================||\n");
+    printf("||        BARIS ARITMATIKA       ||\n");
+    printf("||===============================||\n");
+    printf("\n   BIlangan Pertama : ");
     scanf("%f", &bil1);
-    printf("|| BIlangan Kedua : \n");
+    printf("   BIlangan Kedua : ");
     scanf("%f", &bil2);
-    printf("|| Masukan nilai bilangan atau suku :");
-    scanf("%d", &n);
+    printf("   Masukan nilai bilangan atau suku : ");
+    scanf("%d", &x);
+
     b=bil2-bil1;
-    printf("NIlai suku ke-%d adalah %.f \n", n, barisAritmatika(bil1, b, n));
-    printf("||===============================|| \n");
+    printf("\n   NIlai suku ke-%d adalah %.f", x, hitungBrsAritmatika(bil1, x, b));
+    printf("\n\n||===============================|| \n");
     printf("\n");
     
     
@@ -38,30 +36,30 @@ void aritmatika1(){
 
 void aritmatika2(){
     float bil1, bil2, b;
-    int n;
-    printf("||===============================|| \n");
-    printf("||        BARIS ARITMATIKA       || \n");
-    printf("||===============================|| \n");
-    printf("|| BIlangan Pertama : \n");
+    int x;
+    printf("||===============================||\n");
+    printf("||        DERET ARITMATIKA       ||\n");
+    printf("||===============================||\n");
+    printf("\n   BIlangan Pertama : ");
     scanf("%f", &bil1);
-    printf("|| BIlangan Kedua : \n");
+    printf("   BIlangan Kedua : ");
     scanf("%f", &bil2);
-    printf("|| Masukan nilai bilangan atau suku :");
-    scanf("%d", &n);
+    printf("   Masukan nilai bilangan atau suku : ");
+    scanf("%d", &x);
     b=bil2-bil1;
-    printf("Jumlah suku ke-%d adalah %.f \n", n, jumlahBrsAritmatika(bil1, b, n));
-    printf("||===============================|| \n");
+    printf("\n   Jumlah suku ke-%d adalah %.f", x, jumlahBrsAritmatika(bil1, x, b));
+    printf("\n\n||===============================|| \n");
     printf("\n");
 }
 
-void menu(){
+int main(){
     int pilih;
-    
+
     printf("1. Baris Aritmatika \n");
     printf("2. Deret Aritmatika \n");
-    printf("Pilih salah satu : \n");
+    printf("Pilih salah satu : ");
     scanf("%d", &pilih);
-    
+
     switch(pilih){
         case 1:
             printf("\n");
@@ -74,9 +72,6 @@ void menu(){
             
             
     }
-    
-    
-    
-    
-    
+
+    return 0;
 }
