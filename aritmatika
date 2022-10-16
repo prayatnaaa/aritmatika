@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
-void menu();
+int main();
 
-//perhitungan
 
-float hitungBrsAritmatika(float x, float y, float z){
-    return (x + (y-1) * z);
+
+float barisAritmatika(float a, float b, float c){
+    return (a + (b-1) * c);
     
 }
 
@@ -14,22 +14,22 @@ float jumlahBrsAritmatika(float a, float b, float c){
     return ((b * 0.5) * (2 * a + (b-1) * c));
            }
 
-//menu
+
 
 void aritmatika1(){
     float bil1, bil2, b;
-    int x;
-    printf("||===============================||");
-    printf("||        BARIS ARITMATIKA       ||");
-    printf("||===============================||");
+    int n;
+    printf("||===============================|| \n");
+    printf("||        BARIS ARITMATIKA       || \n");
+    printf("||===============================|| \n");
     printf("|| BIlangan Pertama : \n");
     scanf("%f", &bil1);
     printf("|| BIlangan Kedua : \n");
     scanf("%f", &bil2);
     printf("|| Masukan nilai bilangan atau suku :");
-    scanf("%d", &x);
+    scanf("%d", &n);
     b=bil2-bil1;
-    printf("NIlai suku ke-%d adalah %.f", x, hitungBrsAritmatika(bil1, b, x));
+    printf("NIlai suku ke-%d adalah %.f \n", n, barisAritmatika(bil1, b, n));
     printf("||===============================|| \n");
     printf("\n");
     
@@ -38,18 +38,18 @@ void aritmatika1(){
 
 void aritmatika2(){
     float bil1, bil2, b;
-    int x;
-    printf("||===============================||");
-    printf("||        BARIS ARITMATIKA       ||");
-    printf("||===============================||");
+    int n;
+    printf("||===============================|| \n");
+    printf("||        BARIS ARITMATIKA       || \n");
+    printf("||===============================|| \n");
     printf("|| BIlangan Pertama : \n");
     scanf("%f", &bil1);
     printf("|| BIlangan Kedua : \n");
     scanf("%f", &bil2);
     printf("|| Masukan nilai bilangan atau suku :");
-    scanf("%d", &x);
+    scanf("%d", &n);
     b=bil2-bil1;
-    printf("Jumlah suku ke-%d adalah %.f", x, jumlahBrsAritmatika(bil1, b, x));
+    printf("Jumlah suku ke-%d adalah %.f \n", n, jumlahBrsAritmatika(bil1, b, n));
     printf("||===============================|| \n");
     printf("\n");
 }
